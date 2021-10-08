@@ -36,4 +36,4 @@ EXPLORATORY DATA ANALYSIS
  
 •	Performed a count plot on the sub grades and loan status which showed that as we move along the grades from A1-G5, the charge off seem to go higher.
 
-![](Images/image7png)
+![](Images/image7.png)

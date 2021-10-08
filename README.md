@@ -28,3 +28,12 @@ EXPLORATORY DATA ANALYSIS
  
 •	Performed further statistical summary on loan status and loan amount, by using a group by on the loan status and a describe method on the loan amount which showed that the mean and standard variation of charged off loans are higher than fully paid loans.
 
+•	Explored the grade and subgrade features and realized the subgrade is a more detailed feature based on the grade.
+
+•	Used a count plot to view the relationship between each grade and their loan status e.g., does grade A have more charge off than paid loan etc.
+
+![](Images/image6.png)
+ 
+•	Performed a count plot on the sub grades and loan status which showed that as we move along the grades from A1-G5, the charge off seem to go higher.
+
+![](Images/image7png)

@@ -37,3 +37,15 @@ EXPLORATORY DATA ANALYSIS
 •	Performed a count plot on the sub grades and loan status which showed that as we move along the grades from A1-G5, the charge off seem to go higher.
 
 ![](Images/image7.png)
+
+•	The previous count plot does not show F and G in full detail, so I extracted the F and G subgrades only and did a count plot with loan status as its hue to show the subgrades F and G in full detail. Seems like the G subgrades hardly pay their loans.
+
+![](Images/image8.png)
+ 
+•	Created a numeric feature ‘loan_repaid’ for ‘loan_status’, with 0 and 1 representing charged off and fully paid respectively.
+
+•	Visualized the correlation between the new feature loan repaid and other numeric features, this showed that interest rate has the highest negative correlation which makes sense since the higher the interest rate the higher the chances of not paying the loan.
+
+![](Images/image9.png)
+   
+

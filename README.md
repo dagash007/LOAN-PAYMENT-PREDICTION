@@ -30,6 +30,8 @@ EXPLORATORY DATA ANALYSIS
 
 •	Explored the grade and subgrade features and realized the subgrade is a more detailed feature based on the grade.
 
+
+
 •	Used a count plot to view the relationship between each grade and their loan status e.g., does grade A have more charge off than paid loan etc.
 
 ![](Images/image6.png)
@@ -48,4 +50,52 @@ EXPLORATORY DATA ANALYSIS
 
 ![](Images/image9.png)
    
+**DATA PREPROCESSING**
 
+•	Used the isnull and sum method to view the summation of null values in each column.
+
+•	Calculated the percentage of each columns null values to decide the null values / columns to be dropped or the ones to be retained. Emp_title(% 5.78), emp_length (% 4.62), title (% 0.44), revol_util (% 0.069), mort_acct (% 9.54) and pub_rec_bankruptcies (% 0.135).
+
+•	Started examining emp_title & emp_length to decide if they are to be dropped or retained.
+
+•	The emp_title has too many unique value data of over 170,000 which is simply unrealistic to be converted to dummy variables, so it has to be dropped.
+
+•	Did a count plot on the unique values in the emp_length feature which showed that most loaners were in the category of 10+ years.
+
+![](Images/image10.png)
+ 
+•	Added the loan status as a hue to display how each category of loaners years of working relates to the charged off and fully paid.
+ 
+![](Images/image11.png)
+
+•	The graph above is not giving out a more detailed information we want, so we try calculating and using a bar chat to plot the percentage of charge offs per category, which showed that people who have worked 10 years and above have a slightly lower charged off rate percentage.
+
+![](Images/image12.png)
+ 
+•	Explored the title and purpose column and realized they are both duplicates of one another, so I dropped the title column.
+
+•	Using the value counts method on mort_acc shows that about %10 of mort_acc feature is null.
+
+•	Decided to fill in the missing data in mort_acc with the average of the feature that is closely related to it, which was total_acc. Created a series total_acc_avg, method fill_mort_acc and used the apply method to fill in the missing values.
+
+![](Images/image13.png)
+ 
+•	 Used the select_dtypes method to view all non-numeric columns in order to either delete or convert to dummy variables using one hot encoding.
+
+•	Converted the string binary values of term variables to integers.
+
+•	I dropped the grade variable since the sub grade variable is a more detailed form of the grade variable.
+
+•	Converted the sub grade variable to dummy variables which was now concatenated with the main data frame.
+
+•	Used one hot encoding to convert the remaining categorical or binary variables ('verification_status','application_type','initial_list_status','purpose').
+
+•	Explored the home ownership variable and realized some categories were too small and had to be incorporated into another category e.g., ANY and NONE category were added to OTHER category.
+
+•	Converted the remaining categories (MORTGAGE , RENT, OWN, OTHER) in the home ownership variable to dummy variables.
+
+•	Explored the address column and realized the zip code could be extracted.
+
+•	After extracting the zip-code, I performed one hot encoding on the new zip-code feature.
+
+•	I went ahead and dropped the issue date due to the feature not having much relevance. Since we are predicting whether the loan will be paid or not, realistically, the loan issue date will not be available.

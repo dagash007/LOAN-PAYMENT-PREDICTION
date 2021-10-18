@@ -99,3 +99,32 @@ EXPLORATORY DATA ANALYSIS
 •	After extracting the zip-code, I performed one hot encoding on the new zip-code feature.
 
 •	I went ahead and dropped the issue date due to the feature not having much relevance. Since we are predicting whether the loan will be paid or not, realistically, the loan issue date will not be available.
+
+•	Extracted the year from the earliest_cr_line column.**
+
+**DATA PREPROCESSING (TRAIN TEST SPLIT)**
+
+•	Dropped the loan status since I already created a binary numeric corresponding feature for it (fully paid:1, charged off:0)
+
+•	Created my output (y) and input variables (X) for my train test split.
+
+•	Trained my input and output variables using the fit and transform method.
+
+**MODEL CREATION AND TRAINING**
+
+•	Imported tensor flow so as to use keras api for my model.
+
+•	Built a sequential model while using a dense neuron and also added a drop out layer to prevent overfitting.
+
+•	I assigned rectified linear unit as my activation function to my first and hidden layers while I assigned sigmoid function to the last layer since it was a classification model I am building.
+
+•	I used binary cross entropy and adam for my loss and optimizer respectively.
+
+•	Fitted the model to the training data in batches and also passes in validation data on the test data to check for overfitting.
+
+**MODEL EVALUATION**
+•	Plotted out the validation loss versus the training loss.
+
+•	Used confusion matrix which showed over %85 of our predictions either fell under true positive or true negative while the classification report revealed that the predictions had an accuracy of over %80.
+
+•	Used the model I created to run on a random person in the data to check its accuracy, the model predicted that the person would fully pay which is same with the initial data.

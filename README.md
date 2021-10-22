@@ -1,5 +1,28 @@
 # LOAN-PAYMENT-PREDICTION
 
+**Aim**
+
+The repository contains a loan eligibility prediction based on the lending club dataset from https://www.kaggle.com/wordsforthewise/lending-club. the goals of this are:
+
+•	Use of pandas, NumPy, matplotlib, & seaborn libraries from python to extract insights from the data.
+
+•	Use of train test split function to split the dataset into two arrays input variable(X) and output variable (y).
+
+•	Use a sequential model to build the neural network and Dense layer for how the layers will be connection.
+
+•	Use of confusion matrix and classification report to evaluate our model.
+
+**Dependencies**
+
+•	NumPy
+•	Pandas
+•	Seaborn
+•	Matplotlib
+•	Scikit-Learn
+•	TensorFlow
+•	Keras
+
+**Attributes**
 
   First Header  | Second Header |
 | ------------- | ------------- |

@@ -2,7 +2,7 @@
 
 **Aim**
 
-The repository contains a loan eligibility prediction based on the lending club dataset from https://www.kaggle.com/wordsforthewise/lending-club. the goals of this are:
+The repository contains a loan eligibility prediction based on the lending club dataset from https://www.kaggle.com/wordsforthewise/lending-club. the goals of this project are:
 
 •	Use of pandas, NumPy, matplotlib, & seaborn libraries from python to extract insights from the data.
 
@@ -55,11 +55,37 @@ The repository contains a loan eligibility prediction based on the lending club 
 | mort_acc  | Number of mortgage accounts.  |
 | pub_rec_bankruptcies  | Number of public record bankruptcies  |
 
+**Approach**
 
+1. Exploratory Data Analysis: Used summary statistics and graphical representations to discover patterns or correlation among the variables in the data.
 
+2. Data Preprocessing: Dropping unnecessary or repetitive features, dropping or filling any missing data and converting categorical string features to dummy variables.
 
+3. Model Creation and Training: Built a sequential model to train the input (X) and output (y) variables.
 
+4. Evaluating Model Performance: confusion matrix and classification report to evaluate our model, also plotted the validation loss versus the training loss.
 
+**Major observation from the data**
+
+1. Used the correlation method to explore the correlation between the continuous numerical features, which showed that the most correlated among the variables are the loan amount and the installment payment.
+
+![](Images/image3.png)
+
+2. Explored more on the two most correlated features with a scatter plot. To check out if both are not a duplication of the other.
+
+![](Images/image4.png)
+
+3. Used a box plot to show the relationship between loan status and loan amount. Although both are quite similar, the plot still showed that that charged off loans are slightly higher than fully paid loans, which means that when the loan amount is slightly higher, there is a probability of the loan not being paid.
+
+![](Images/image5.png)
+
+4. Used a count plot to view the relationship between each grade and their loan status e.g., does grade A have more charge off than paid loan etc.
+
+![](Images/image6.png)
+
+5. Performed a count plot on the sub grades and loan status which showed that as we move along the grades from A1-G5, the charge off seem to go higher.
+
+![](Images/image7.png)
 
 
 

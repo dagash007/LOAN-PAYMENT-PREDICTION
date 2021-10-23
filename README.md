@@ -2,7 +2,7 @@
 
 **Aim**
 
-The repository contains a loan eligibility prediction based on the lending club dataset from [kaggle] (https://www.kaggle.com/wordsforthewise/lending-club). the goals of this project are:
+The repository contains a loan eligibility prediction based on the lending club dataset from https://www.kaggle.com/wordsforthewise/lending-club. the goals of this project are:
 
 •	Use of pandas, NumPy, matplotlib, & seaborn libraries from python to extract insights from the data.
 
